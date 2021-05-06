@@ -163,8 +163,6 @@ internal class CornerEffectCornerImage(context: Context) : CornerResizeView(cont
         // Update effect with new radius
         cornerEffect = CornerPathEffect(radius)
 
-        update(width, height)
-
         invalidate()
     }
 

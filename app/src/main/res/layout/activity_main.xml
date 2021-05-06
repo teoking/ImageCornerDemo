@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B2EBF2"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        android:background="#7986CB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/layerTypeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:checkedButton="@id/layerHardware"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <RadioButton
+            android:id="@+id/layerHardware"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LayerHardware" />
+
+        <RadioButton
+            android:id="@+id/layerSoftware"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LayerSoftware" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/imageTypeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:checkedButton="@id/outlineImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layerTypeGroup">
+
+        <RadioButton
+            android:id="@+id/outlineImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OutlineRoundCornerImage" />
+
+        <RadioButton
+            android:id="@+id/shaderImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ShaderRoundCornerImage" />
+
+        <RadioButton
+            android:id="@+id/cornerEffectImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CornerEffectCornerImage" />
+    </RadioGroup>
+
+    <SeekBar
+        android:id="@+id/cornerPercentBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:max="50"
+        android:progress="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageTypeGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>
